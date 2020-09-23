@@ -17,14 +17,12 @@ int hash(double key)
 
 void insert(int *hashTable, int key)
 {
-    int index = hash(key);
-    hashTable[index] = key;
+    hashTable[hash(key)] = key;
 }
 
 int search(int *hashTable, int key)
 {
     //returns -1 if not found
-    int index = hash(key);
     int result = hashTable[hash(key)];
     return result;
 }
